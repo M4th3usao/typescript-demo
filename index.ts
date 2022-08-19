@@ -2,8 +2,13 @@
 import './style.css';
 
 // Write TypeScript code!
+
+let title: string = 'My app';
+let paragraph: string = 'Olá, mundo!';
+
 const appDiv: HTMLElement = document.getElementById('app');
-appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;
+appDiv.innerHTML = `<h1>${title}</h1><br>
+                    <p>${paragraph}</p>`;
 
 console.log('Olá, mundo');
 
