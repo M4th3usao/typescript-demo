@@ -6,14 +6,12 @@ import './style.css';
 let title: string = 'My app';
 let paragraph: string = 'Olá, mundo!';
 
-const appDiv: HTMLElement = document.getElementById('app');
-appDiv.innerHTML = `<h1>${title}</h1><br>
-                    <p>${paragraph}</p>`;
+let counter: number = 0;
 
-console.log('Olá, mundo');
+let intervaloId = setInterval(() => {
+  counter++;
+  document.getElementById('app.counter')
+  .innerHTML = counter.toString();
+}, 1000);
 
-for (let i = 1; i <= 10; i++) {
-  if (i % 2 == 0) {
-    console.log(i);
-  }
-}
+document.getElementById('app.title').innerHTML = title;
