@@ -3,28 +3,24 @@ import './style.css';
 
 // Write TypeScript code!
 
-let title: string = 'My app';
-let paragraph: string = 'Olá, mundo!';
-
 let counter: number = 0;
 
+let ciclo: number = 0;
 let descanso: number = 0;
 
-for (let i = 1; i < 10; i++) {
-  if (i % 2 == 0) {
-    descanso++;
-    document.getElementById('app.descanso').innerHTML = counter.toString();
-  }
+for (let i = 0; i <= 1; i++) {
+  let intervaloId = setInterval(() => {
+    descanso = descanso + i;
+    document.getElementById('app.descanso').innerHTML = descanso.toString();
+
+    if (descanso == 10) {
+      descanso = 0;
+    }
+    if (ciclo == 8) {
+      ciclo = ciclo - i;
+      document.getElementById('app.ciclo').innerHTML = ciclo.toString();
+    }
+  }, 400);
 }
-
-let intervaloId = setInterval(() => {
-  counter++;
-  document.getElementById('app.counter').innerHTML = counter.toString();
-}, 1000);
-
-let exercicio = setInterval(() => {
-  exercicio++;
-  document.getElementById('app.exercicio').innerHTML = descanso.toString();
-});
-
-document.getElementById('app.title').innerHTML = title;
+/*ciclo++;
+document.getElementById('app.cilo').innerHTML = ciclo.toString();*/
