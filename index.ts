@@ -8,6 +8,12 @@ let paragraph: string = 'Olá, mundo!';
 
 let counter: number = 0;
 
+for (let i = 1; i < 10; i++){
+   if ( i % == 0 ){
+
+   }
+}
+
 let intervaloId = setInterval(() => {
   counter++;
   document.getElementById('app.counter').innerHTML = counter.toString();
@@ -16,11 +22,13 @@ let intervaloId = setInterval(() => {
 let descanso = setInterval(() => {
   descanso++;
   document.getElementById('app.descanso').innerHTML = descanso.toString();
-}, 500);
+});
 
 let exercicio = setInterval(() => {
   exercicio++;
   document.getElementById('app.exercicio').innerHTML = descanso.toString();
-}, 500);
+});
+
+
 
 document.getElementById('app.title').innerHTML = title;
